@@ -78,7 +78,9 @@ Now open class AppDelegate and import GoogleSignIn Module
 
 In your AppDelegate’s application:openURL:options method, call GIDSignIn's handleURL: method:
 
-func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+
+
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         var handled: Bool
         
         handled = GIDSignIn.sharedInstance.handle(url)

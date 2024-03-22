@@ -61,3 +61,23 @@ Go to the Google API Console OAuth consent screen page
 Add required information like a product name and support email address.
 
 Once you finished configuring the OAuth consent screen then let's move to Xcode and configure because Google Sign-In requires your project to be configured with your OAuth client ID and a custom URL scheme.
+
+3. Add your OAuth client ID and custom URL scheme
+
+Update your app’s Info.plist file to add your OAuth client ID and a custom URL scheme
+
+![Screenshot 2024-03-22 at 8 39 50 AM](https://github.com/KalpeshKalsariya/GoogleLoginDemo/assets/38584779/ae8164b9-dd42-4d9e-849a-825eecbf0397)
+
+or add in Info.plist → open as → source code and add below in plist Dict.
+
+<key>GIDClientID</key>
+    <string><YOUR_IOS_CLIENT_ID>.apps.googleusercontent.com</string>
+    <key>CFBundleURLTypes</key>
+    <array>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.googleusercontent.apps.<YOUR_DOT_REVERSED_IOS_CLIENT_ID></string>
+        </array>
+      </dict>
+    </array>

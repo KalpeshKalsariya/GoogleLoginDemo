@@ -1,6 +1,6 @@
 # GoogleLoginDemo
 
-1. Add Google Sign-in SDK into our iOS project:
+**1. Add Google Sign-in SDK into our iOS project:**
 Here we need to add all required dependencies using CocoaPods or Swift Package Manager.
 
 let's add Google Sign-in SDK using Swift Package Manager: 
@@ -26,7 +26,7 @@ after verifying Google sign-in: choose the package product and then add the pack
 
 after the SDK installation is successful, open AppDelegate.swift and import the SDK. import GoogleSignIn
 
-2. Get an OAuth client ID: app needs an OAuth client ID to identify itself to Google’s authentication backend for or iOS
+**2. Get an OAuth client ID: app needs an OAuth client ID to identify itself to Google’s authentication backend for or iOS**
 
 To create an OAuth client ID in the console: Go to the Google Cloud Platform Console(https://console.cloud.google.com)
 
@@ -62,7 +62,7 @@ Add required information like a product name and support email address.
 
 Once you finished configuring the OAuth consent screen then let's move to Xcode and configure because Google Sign-In requires your project to be configured with your OAuth client ID and a custom URL scheme.
 
-3. Add your OAuth client ID and custom URL scheme
+**3. Add your OAuth client ID and custom URL scheme**
 
 Update your app’s Info.plist file to add your OAuth client ID and a custom URL scheme
 
@@ -72,7 +72,7 @@ or add in Info.plist → open as → source code and add below in plist Dict.
 
 ![Screenshot 2024-03-22 at 8 44 09 AM](https://github.com/KalpeshKalsariya/GoogleLoginDemo/assets/38584779/cfae121a-9959-47d9-8cd5-534ff391adab)
 
-4. Handle the authentication redirect URL: iOS: UIApplicationDelegate
+**4. Handle the authentication redirect URL: iOS: UIApplicationDelegate**
 
 Now open class AppDelegate and import GoogleSignIn Module
 
@@ -94,7 +94,7 @@ In your AppDelegate’s application:openURL:options method, call GIDSignIn's han
         return false
     }
 
-5. Attempt to restore the user’s sign-in state:
+**5. Attempt to restore the user’s sign-in state:**
 
 When your app starts up, call restorePreviousSignInWithCallback to try and restore the sign-in state of users who already signed in using Google. Doing so ensures users don't have to sign in every time they open your app (unless they've signed out).
 
@@ -115,7 +115,7 @@ iOS apps often do this in UIApplicationDelegate's application:didFinishLaunching
     }
 
 
-6. Add a Google Sign-In and Sign-Out buttons in UIView.
+**6. Add a Google Sign-In and Sign-Out buttons in UIView.**
 
 ![Simulator Screenshot - iPhone 15 Pro Max - 2024-03-22 at 08 59 52](https://github.com/KalpeshKalsariya/GoogleLoginDemo/assets/38584779/2954a0cc-5fcc-4635-b89d-38df8a974cfd)
 ![Simulator Screenshot - iPhone 15 Pro Max - 2024-03-22 at 08 59 58](https://github.com/KalpeshKalsariya/GoogleLoginDemo/assets/38584779/cb257296-d190-428a-abb6-fb27919d535f)
@@ -211,4 +211,4 @@ extension ViewController {
     }
 }
 
-Note: I have removed my GIDClientID<YOUR_IOS_CLIENT_ID> and CFBundleURLSchemes<YOUR_DOT_REVERSED_IOS_CLIENT_ID> so before using this demo project please add yours.
+**Note:** I have removed my **GIDClientID<YOUR_IOS_CLIENT_ID>** and **CFBundleURLSchemes<YOUR_DOT_REVERSED_IOS_CLIENT_ID>** so before using this demo project please add yours.

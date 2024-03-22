@@ -125,12 +125,6 @@ import GoogleSignIn in your ViewController Class. Here, I have created a label a
 
 After a user signs in with Google, you can get the user’s basic profile information: their name, profile image URL, and email address.
 
-//
-//  ViewController.swift
-//  GoogleLoginDemo
-//
-//  Created by  Kalpesh on 22/03/24.
-//
 
 import UIKit
 import GoogleSignIn
@@ -144,15 +138,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var imgProfile: UIImageView!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
+        super.viewDidLoad()        
         // Do any additional setup after loading the view.
     }
 
 
 }
-//MARK: @IBAction
+
 extension ViewController {
     @IBAction func btnGoogleSingInDidTap(_ sender: Any) {
         
@@ -218,4 +210,5 @@ extension ViewController {
         GIDSignIn.sharedInstance.signOut()
     }
 }
+
 

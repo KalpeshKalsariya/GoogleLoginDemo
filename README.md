@@ -93,3 +93,22 @@ In your AppDelegate’s application:openURL:options method, call GIDSignIn's han
         // If not handled by this app, return false.
         return false
     }
+
+5. Attempt to restore the user’s sign-in state:
+
+When your app starts up, call restorePreviousSignInWithCallback to try and restore the sign-in state of users who already signed in using Google. Doing so ensures users don't have to sign in every time they open your app (unless they've signed out).
+
+iOS apps often do this in UIApplicationDelegate's application:didFinishLaunchingWithOptions: method
+
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+            if error != nil || user == nil {
+              // Show the app's signed-out state.
+            } else {
+              // Show the app's signed-in state.
+            }
+          }
+        
+        return true
+    }

@@ -70,14 +70,5 @@ Update your app’s Info.plist file to add your OAuth client ID and a custom URL
 
 or add in Info.plist → open as → source code and add below in plist Dict.
 
-<key>GIDClientID</key>
-    <string><YOUR_IOS_CLIENT_ID>.apps.googleusercontent.com</string>
-    <key>CFBundleURLTypes</key>
-    <array>
-      <dict>
-        <key>CFBundleURLSchemes</key>
-        <array>
-          <string>com.googleusercontent.apps.<YOUR_DOT_REVERSED_IOS_CLIENT_ID></string>
-        </array>
-      </dict>
-    </array>
+![Screenshot 2024-03-22 at 8 44 09 AM](https://github.com/KalpeshKalsariya/GoogleLoginDemo/assets/38584779/cfae121a-9959-47d9-8cd5-534ff391adab)
+

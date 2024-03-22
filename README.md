@@ -72,3 +72,22 @@ or add in Info.plist → open as → source code and add below in plist Dict.
 
 ![Screenshot 2024-03-22 at 8 44 09 AM](https://github.com/KalpeshKalsariya/GoogleLoginDemo/assets/38584779/cfae121a-9959-47d9-8cd5-534ff391adab)
 
+4. Handle the authentication redirect URL: iOS: UIApplicationDelegate
+
+Now open class AppDelegate and import GoogleSignIn Module
+
+In your AppDelegate’s application:openURL:options method, call GIDSignIn's handleURL: method:
+
+func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        var handled: Bool
+        
+        handled = GIDSignIn.sharedInstance.handle(url)
+        if handled {
+            return true
+        }
+        
+        // Handle other custom URL types.
+        
+        // If not handled by this app, return false.
+        return false
+    }

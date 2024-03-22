@@ -211,4 +211,4 @@ extension ViewController {
     }
 }
 
-
+Note: I have removed my GIDClientID<YOUR_IOS_CLIENT_ID> and CFBundleURLSchemes<YOUR_DOT_REVERSED_IOS_CLIENT_ID> so before using this demo project please add yours.

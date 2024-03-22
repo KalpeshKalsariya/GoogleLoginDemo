@@ -22,6 +22,6 @@ Repository URL: https://github.com/google/GoogleSignIn-iOS
 
 after verifying Google sign-in: choose the package product and then add the package. After adding dependency your project looks like this
 
-![Uploading Screenshot 2024-03-22 at 8.19.56 AM.png…]()
+![Screenshot 2024-03-22 at 8 19 56 AM](https://github.com/KalpeshKalsariya/GoogleLoginDemo/assets/38584779/98132d1c-1fa0-4e41-b4fb-94aba86ba27c)
 
 after the SDK installation is successful, open AppDelegate.swift and import the SDK. import GoogleSignIn

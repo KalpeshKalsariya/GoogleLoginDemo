@@ -100,7 +100,8 @@ When your app starts up, call restorePreviousSignInWithCallback to try and resto
 
 iOS apps often do this in UIApplicationDelegate's application:didFinishLaunchingWithOptions: method
 
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
             if error != nil || user == nil {
@@ -112,3 +113,5 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
         
         return true
     }
+
+
